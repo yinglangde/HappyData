@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.jeecg.modules.report.mapper.RptAdDemoDailyMapper">
+    <select id="findAll"  resultType="org.jeecg.modules.report.entity.RptAdDemoDaily">
+        select * from rpt_ad_demo_daily
+    </select>
+
+    <select id="findOneDayAll"  resultType="org.jeecg.modules.report.entity.RptAdDemoDaily" parameterType="java.lang.String">
+        select hour,click_num,download_num from rpt_ad_demo_daily where dt= #{0}
+    </select>
+
+</mapper>
